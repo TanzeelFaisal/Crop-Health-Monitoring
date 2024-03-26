@@ -1,0 +1,97 @@
+/* Default styles */
+
+.signup-container {
+    background-color: #161616;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    width: 25%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.picture-container {
+    width: 65%;
+    height: 90%;
+    background-image: url('/public/images/Image.png'); /* Adjust the path relative to the public directory */
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 49px;
+    margin-left: 40px;
+    left: 0;
+    border-radius: 20px;
+}
+
+.signup-container h2 {
+    margin-bottom: 20px;
+}
+
+.input-container {
+    padding-bottom: 20px;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+button {
+    font-weight: bold;
+    color: black;
+    background-color: #1dea2c;
+}
+
+button:hover {
+    background-color: #13a823;
+}
+
+a {
+    color: #1dea2c;
+}
+
+a:hover {
+    color: #13a823;
+}
+
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+    .signup-container {
+        width: 90%; /* Adjust width for smaller screens */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .picture-container {
+        display: none; /* Hide the picture on smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .signup-container {
+        padding-left: 20px; /* Adjust padding for smaller screens */
+        padding-right: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .input-container {
+        padding-bottom: 15px; /* Adjust padding for smaller screens */
+    }
+
+    button {
+        padding: 15px; /* Adjust button padding for smaller screens */
+    }
+}

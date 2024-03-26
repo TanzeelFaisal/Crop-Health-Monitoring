@@ -1,0 +1,142 @@
+/* Default styles */
+
+.login-container {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: white;
+}
+
+.picture {
+    width: 65%;
+    height: 90%;
+    background-image: url('/public/images/Image.png'); 
+    background-size: cover; 
+    background-position: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    left: 0;
+    border-radius: 20px; 
+    margin-top: 49px;
+    margin-left: 40px;
+}
+
+.login-form {
+    background-color: #161616;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    width: 25%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-container {
+    position: relative;
+    color: black;
+    width: 90%;
+}
+
+input {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.simple-login,
+.google-login,
+.facebook-login {
+    background-color: #1dea2c;
+    color: black;
+    font-weight: bold;
+}
+
+.simple-login:hover,
+.google-login:hover,
+.facebook-login:hover {
+    background-color: #13a823;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.google-login,
+.facebook-login {
+    margin: 5px;
+}
+
+a {
+    color: #1dea2c;
+}
+
+
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+    .login-container {
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .picture {
+        display: none; /* Hide the picture on smaller screens */
+    }
+
+    .login-form {
+        width: 90%;
+        margin-right: 0; /* Remove right margin */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .login-form {
+        padding: 20px;
+    }
+
+    input,
+    button {
+        padding: 15px;
+    }
+}
