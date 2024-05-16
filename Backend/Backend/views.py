@@ -7,15 +7,14 @@ from django.middleware.csrf import get_token
 from django.http import JsonResponse
 
 # Load your Keras model
-model_path = 'D:/Crop-Health-Monitoring/Backend/Backend/model.h5'
+model_path = 'C:/Users/hp/Git/Crop-Health-Monitoring/Backend/Backend/model.h5'
 model = load_model(model_path)
 
-# Define your class names
-class_names = ['Weed', 'Crop', 'Leaf']  # Replace with your class names
+# Defining class mapping
+class_names = ['Crop', 'Leaf', 'Weed']
 
 # def predict_image(request):
 #     if request.method == 'POST':
-#         print("i am gay...")
 #         csrf_token = get_token(request)
 #         # Assuming image data is sent in the 'image' field of the request
 #         image_data = request.FILES['image']
@@ -63,7 +62,7 @@ class_names = ['Weed', 'Crop', 'Leaf']  # Replace with your class names
 def predict_image(request):
     if request.method == 'POST':
         # Iterate over the keys in request.FILES
-        for key, file in request.FILES.items():
+        for _, file in request.FILES.items():
             # Save the uploaded image to a temporary location
             image_path = 'temp_image.jpg'
             with open(image_path, 'wb') as f:
