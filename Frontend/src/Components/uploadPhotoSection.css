@@ -1,0 +1,101 @@
+.upload-section {
+    padding: 20px;
+  }
+  
+  .upload-section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .upload-section input {
+    margin-bottom: 10px;
+  }
+  
+  .upload-section button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .upload-section button:hover {
+    background-color: #218838;
+  }
+  
+  h3 {
+    color: #ddd;
+  }
+  
+  .image-preview-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    border: 1px solid #ddd;
+    justify-content: space-evenly;
+  }
+  
+  .image-preview {
+    position: relative; /* Needed to position the delete button */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+    max-width: 150px;
+  }
+  
+  .image-preview img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  
+  .image-preview img:hover {
+    opacity: 0.5;
+  }
+  
+  .image-preview p {
+    text-align: center;
+    font-size: 14px;
+    word-wrap: break-word;
+    color: #ddd;
+  }
+  
+  .delete-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    padding: 5px 10px; /* Padding for the button */
+    cursor: pointer;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+  }
+  
+  .image-preview:hover .delete-button {
+    opacity: 1; /* Show the button on hover */
+  }
+  
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 20px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(53, 52, 52);
+    border-radius: 10px;
+  }
+  

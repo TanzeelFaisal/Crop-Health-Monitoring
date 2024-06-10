@@ -4,6 +4,8 @@ import Login from './Components/login';
 import SignUp from './Components/signup';
 import { BrowserRouter as Router, Route, BrowserRouter, Routes } from 'react-router-dom';
 import MainDashboard from './Components/mainDashboard';
+import Results from './Components/results';
+import UploadPhotosSection from './Components/uploadPhotoSection';
 // import CropHealthCalculator from './Components/cropHealthCalculator';
 
 function App() {
@@ -13,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/dashboard" element={<MainDashboard/>}/>
+          <Route path="/dashboard" element={<UploadPhotosSection/>}/>
           {/* <Route path="/crop-health-calculator" element={<CropHealthCalculator/>} /> */}
         </Routes>
       </BrowserRouter>
