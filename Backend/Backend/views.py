@@ -1,5 +1,7 @@
 # views.py
 from django.http import JsonResponse
+from django.conf import settings
+# from Backend.Backend import settings
 from .utils import display_image_and_prediction
 from tensorflow.keras.models import load_model
 import os
@@ -7,7 +9,9 @@ from django.middleware.csrf import get_token
 from django.http import JsonResponse
 
 # Load your Keras model
-model_path = 'C:/Users/hp/Git/Crop-Health-Monitoring/Backend/Backend/model.h5'
+model_filename = "Backend/model.h5"
+model_path = os.path.join(settings.BASE_DIR, model_filename)
+# model_path = 'model.h5'
 model = load_model(model_path)
 
 # Defining class mapping
