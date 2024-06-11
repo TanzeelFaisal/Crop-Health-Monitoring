@@ -1,0 +1,160 @@
+.upload-section {
+  min-height: 80vh;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+  
+  .upload-section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .upload-section input {
+    margin-bottom: 10px;
+  }
+  
+  .upload-section button {
+    display: block;
+  }
+  
+  /* .upload-section button:hover {
+    background-color: #218838;
+  }
+   */
+  h3 {
+    color: #ddd;
+  }
+  
+  .image-preview-container {
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    gap: 80px;
+    align-items: center;
+  }
+  
+  .image-preview {
+    background-color: #333333;
+    position: relative; /* Needed to position the delete button */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    border-radius: 10px;
+  }
+  
+  .image-preview img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-bottom: 5px;
+  }
+  
+  .image-preview img:hover {
+    opacity: 0.5;
+  }
+  
+  .image-preview p {
+    text-align: center;
+    font-size: 14px;
+    word-wrap: break-word;
+    color: #ddd;
+  }
+  
+  .delete-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    padding: 5px 10px; /* Padding for the button */
+    cursor: pointer;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+  }
+  
+  .image-preview:hover .delete-button {
+    opacity: 1; /* Show the button on hover */
+  }
+  
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 20px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(53, 52, 52);
+    border-radius: 10px;
+  }
+  
+  .add-image-button
+  {
+    background-color: #333333;
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+    color: #ededed;
+    font-weight: 200;
+  }
+
+  .image-name-container
+  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .upload-button
+  {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    display: block;
+    bottom: 0;
+    background-color: #43A047;
+    z-index: 100;
+  }
+
+  .add-image-button
+  {
+    width: 200px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 1s ease;
+  }
+
+  .add-image-button:hover
+  {
+    background-color: #222222;
+  }
+
+  .dotted-add-image
+  {
+    width: 200px;
+    height: 245px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    border: 2px dotted #ededed;
+    cursor: pointer;
+  }
+
+  .crop-image
+  {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+  }
