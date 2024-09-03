@@ -35,12 +35,13 @@
   }
   
   .image-preview {
+    min-height: 400px;
     background-color: #333333;
     position: relative; /* Needed to position the delete button */
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
+    width: 225px;
     border-radius: 10px;
   }
   
@@ -48,8 +49,6 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
     margin-bottom: 5px;
   }
   
@@ -125,6 +124,7 @@
     display: block;
     bottom: 0;
     background-color: #43A047;
+    color: #ededed;
     z-index: 100;
   }
 
@@ -143,8 +143,8 @@
 
   .dotted-add-image
   {
-    width: 200px;
-    height: 245px;
+    width: 225px;
+    height: 350px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -157,4 +157,37 @@
     width: 100px;
     height: 100px;
     border-radius: 10px;
+  }
+
+  .selection-button
+  {
+    font-size: 11px;
+    background-color: transparent;
+    border: 1.5px solid #43A047;
+    color: #ededed;
+    padding: 1px;
+    height: 30px;
+    font-weight: 100;
+  }
+
+  .selection-button:hover
+  {
+    background-color: #43A047;
+  }
+
+  .clear-button
+  {
+    background-color: #ff0000;
+    color: #ededed;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: block;
+    margin-left: auto;
+    margin-right: 9.5rem;
+    height: fit-content;
+    border-radius: 10px;
+    margin-bottom: 20px;
   }

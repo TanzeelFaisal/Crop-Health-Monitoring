@@ -20,5 +20,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('predict/', views.predict_image, name='predict_image'),
+    path('detect-weeds/', views.detect_weeds, name='detect_weeds'),
+    path('classify-diseases/', views.classify_diseases, name='classify_diseases'),
+    path('fill-feedback/', views.fill_feedback, name='fill_feedback'),
+    path('history/', views.history, name='history'),
 ]

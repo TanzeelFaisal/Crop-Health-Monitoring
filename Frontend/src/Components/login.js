@@ -1,15 +1,25 @@
 import React, { useState } from 'react';
 import { FaEnvelope, FaEye, FaGoogle, FaFacebook } from 'react-icons/fa';
 import './login.css'; // CSS file for styling
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import supabase from '../Config/supabase';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
-  const handleLogin = () => {
-    // Handle login logic here
+  const handleLogin = async () => {
+    const {data, error} = await supabase.auth.signInWithPassword({email, password});
+    if (error)
+    {
+      console.log(error);
+    }
+    else
+    {
+      navigate('/home');
+    }
     console.log('Logging in...');
 
   };
@@ -55,14 +65,14 @@ const Login = () => {
           Login
         </button>
         <div className="divider"></div> {/* Add divider */}
-        <div className="social-buttons">
+        {/* <div className="social-buttons">
           <button className="google-login" onClick={handleGoogleLogin}>
             <FaGoogle /> Google Login
           </button>
           <button className="facebook-login" onClick={handleFacebookLogin}>
             <FaFacebook /> Facebook Login
-          </button>
-        </div>
+          </button> */}
+        {/* </div> */}
         <p>Don't have an account? <Link to ='/signup'> SignUp</Link></p>
 
       </div>

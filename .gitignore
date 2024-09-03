@@ -1,3 +1,5 @@
 
 /Backend/venv
 cropsense
+base_model.h5
+fine_tuned_model.h5

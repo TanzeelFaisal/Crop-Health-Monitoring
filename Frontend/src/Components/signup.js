@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './signup.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import supabase from '../Config/supabase';
 
 const SignUp = () => {
   const [name, setName] = useState('');
@@ -8,10 +9,17 @@ const SignUp = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleSignUp = () => {
+  const handleSignUp = async () => {
     // Handle sign up logic here
-    console.log('Signing up...');
+      const {data, error} = await supabase.auth.signUp({email, password, options: {data: {name, username}}});
+      if (error)
+      {
+        console.log(error);
+      }
+      console.log('Logging in...');
+      navigate('/');
   };
 
   return (

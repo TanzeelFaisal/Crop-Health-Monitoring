@@ -1,0 +1,8 @@
+Django==4.2.13
+keras==2.13.1
+matplotlib==3.7.5
+mongoengine==0.28.2
+numpy==1.24.3
+opencv_python==4.8.0.76
+tensorflow==2.13.1
+ultralytics==8.2.31

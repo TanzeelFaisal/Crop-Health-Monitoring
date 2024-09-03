@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^(xeggkh=kk)hybh=06c^r287-^07e1a0ty-y#i*00qjkx(bp)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,24 +76,30 @@ WSGI_APPLICATION = 'Backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+import mongoengine
+mongoengine.connect(
+    db='cropsense',  # Database name
+    host='mongodb://localhost:27017/cropsense',  # MongoDB URI
+)
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'cropsense',
-        'ENFORCE_SCHEMA': False,
-        'CLIENT': {
-            'host': 'mongodb://localhost:27017',
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'cropsense',
+#         'ENFORCE_SCHEMA': False,
+#         'CLIENT': {
+#             'host': 'mongodb://localhost:27017',
+#         }
+#     }
+# }
 
 
 # Password validation
